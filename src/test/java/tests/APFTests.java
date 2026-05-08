@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class APFTests extends TestBase {
 
     @Test
-    void APFTestAllFields() {
+    void apfTestAllFields() {
         open("/automation-practice-form");
         $("[id=firstName]").setValue("Mikhail");
         $("[id=lastName]").setValue("Baylov");
