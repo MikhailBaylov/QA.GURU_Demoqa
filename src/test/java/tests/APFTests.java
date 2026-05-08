@@ -9,17 +9,13 @@ import static com.codeborne.selenide.Selenide.open;
 public class APFTests extends TestBase {
 
     @Test
-    void successfulFillFormTest() {
+    void APFTestAllFields() {
         open("/automation-practice-form");
-        $("[id=userName]").setValue("Alex Black");
-        $("[id=userEmail]").setValue("alex@black.com");
-        $("[id=currentAddress]").setValue("first address 1");
-        $("[id=permanentAddress]").setValue("second address 2");
-        $("[id=submit]").click();
+        $("[id=firstName]").setValue("Mikhail");
+        $("[id=lastName]").setValue("Baylov");
+        $("[id=userEmail]").setValue("mikhailbaylov@qa.guru");
+        $("[id=output] [id=name]")
+        $("[id=genterWrapper] [id=gender-radio-1"] ).click();
 
-        $("[id=output] [id=name]").shouldHave(text("Alex Black"));
-        $("[id=output] [id=email]").shouldHave(text("alex@black.com"));
-        $("[id=output] [id=currentAddress]").shouldHave(text("first address 1"));
-        $("[id=output] [id=permanentAddress]").shouldHave(text("second address 2"));
     }
 }
