@@ -23,4 +23,4 @@ public class TextBoxTests extends TestBase {
         $("[id=output] [id=currentAddress]").shouldHave(text(currentAddress));
         $("[id=output] [id=permanentAddress]").shouldHave(text(currentAddress));
     }
-}
+
