@@ -15,4 +15,7 @@ public class TestData {
             subjects = "English",
             state = "Rajasthan",
             city="Jaipur";
+    public static String fullUserName = firstName + " " + lastName;
+    public static String fullUserDate = day + " " + month + "," + year;
+    public static String stateCity = state + " " + city;
 }
