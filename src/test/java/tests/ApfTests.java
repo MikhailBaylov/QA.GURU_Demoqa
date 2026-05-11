@@ -16,14 +16,14 @@ public class ApfTests extends TestBase {
         $("[id=firstName]").setValue(firstName);
         $("[id=lastName]").setValue(lastName);
         $("[id=userEmail]").setValue(userEmail);
-        $("[id=gender-radio-1]").click();
+        $("[id=genterWrapper]").$(byText(gender)).click();
         $("[id=userNumber]").setValue(userNumber);
         $("[id=dateOfBirthInput]").click();
         $("[class=react-datepicker__year-select]").$(byText(year)).click();
         $("[class=react-datepicker__month-select]").$(byText(month)).click();
         $("[class=react-datepicker__month]").$(byText(day)).click();
         $("[id=subjectsInput]").setValue(subjects).pressEnter();
-        $("[id=hobbies-checkbox-3]").click();
+        $("[id=hobbiesWrapper]").$(byText(hobbies)).click();
         $("[id=uploadPicture]").uploadFromClasspath("picture.jpg");
         $("[id=currentAddress]").setValue(currentAddress);
         $("[id=react-select-3-input]").setValue(state).pressEnter();
