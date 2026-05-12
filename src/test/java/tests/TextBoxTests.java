@@ -10,17 +10,17 @@ import static testData.TestData.*;
 public class TextBoxTests extends TestBase {
 
     @Test
-    void successfulFillFormTest() {
-        open("/text-box");
-        $("[id=userName]").setValue(firstName + " " + lastName);
-        $("[id=userEmail]").setValue(userEmail);
-        $("[id=currentAddress]").setValue(currentAddress);
-        $("[id=permanentAddress]").setValue(currentAddress);
-        $("[id=submit]").click();
-
-        $("[id=output] [id=name]").shouldHave(text(firstName + " " + lastName));
-        $("[id=output] [id=email]").shouldHave(text(userEmail));
-        $("[id=output] [id=currentAddress]").shouldHave(text(currentAddress));
-        $("[id=output] [id=permanentAddress]").shouldHave(text(currentAddress));
+    void successfulFileFormTestBox() {
+        textBoxPage.openPage();
+        textBoxPage.
+                typeUserName(fullUserName).
+                typeUserEmail(userEmail).
+                typeUserCurrentAddress(currentAddress).
+                typeUserPermanentAddress(currentAddress).
+                submitForm().
+                checkField("name", fullUserName).
+                checkField("email", userEmail).
+                checkField("currentAddress", currentAddress).
+                checkField("permanentAddress", currentAddress);
     }
 }
