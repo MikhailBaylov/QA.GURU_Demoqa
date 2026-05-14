@@ -1,26 +1,22 @@
 package tests;
 
 import org.junit.jupiter.api.Test;
-
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
-import static testData.TestData.*;
+import testData.TestData;
 
 public class TextBoxTests extends TestBase {
-
+    TestData testData = new TestData();
     @Test
     void successfulFileFormTestBox() {
         textBoxPage.openPage();
         textBoxPage.
-                typeUserName(fullUserName).
-                typeUserEmail(userEmail).
-                typeUserCurrentAddress(currentAddress).
-                typeUserPermanentAddress(currentAddress).
+                typeUserName(testData.fullUserName).
+                typeUserEmail(testData.userEmail).
+                typeUserCurrentAddress(testData.currentAddress).
+                typeUserPermanentAddress(testData.currentAddress).
                 submitForm().
-                checkField("name", fullUserName).
-                checkField("email", userEmail).
-                checkField("currentAddress", currentAddress).
-                checkField("permanentAddress", currentAddress);
+                checkField("name", testData.fullUserName).
+                checkField("email", testData.userEmail).
+                checkField("currentAddress", testData.currentAddress).
+                checkField("permanentAddress", testData.currentAddress);
     }
 }
