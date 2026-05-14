@@ -18,6 +18,7 @@ public class CalendarPicker {
     }
 
     private SelenideElement dayOfBirthInput(String d) {
+        System.out.println(d);
         return $(".react-datepicker__day--0" + d + ":not(.react-datepicker__day--outside-month)");
     }
 
